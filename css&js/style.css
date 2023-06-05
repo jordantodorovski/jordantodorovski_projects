@@ -1,0 +1,469 @@
+@font-face {
+  font-family: Roboto;
+  src: url(../fonts&data/Roboto-Regular.ttf);
+}
+@font-face {
+  font-family: ReenieBeanie;
+  src: url(../fonts&data/ReenieBeanie-Regular.ttf);
+}
+:root {
+  --backgroundCol: #fcebd5;
+  --primaryCol: #a16a5e;
+  --normalCol: #edd5bb;
+  --defaultCol: #a26a5e;
+  --secondaryCol: #f5e3cb;
+  --thirdlyCol: #e09686;
+  --fourthlyCol: #d44c2e;
+  --contrastCol: #d54c2e;
+  --backgroundGray: #e5e5e5;
+}
+html {
+  overflow-x: hidden;
+}
+body {
+  background-color: var(--backgroundCol);
+  overflow: hidden;
+}
+nav {
+  box-shadow: 0px 1px 5px -1px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 0px 1px 5px -1px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 1px 5px -1px rgba(0, 0, 0, 0.75);
+  z-index: 999;
+}
+#collapseNav {
+  background-color: var(--primaryCol);
+}
+#collapseNav a {
+  color: var(--backgroundCol);
+}
+/* LANDING PAGE*/
+.title {
+  font-family: ReenieBeanie;
+  color: var(--primaryCol);
+  margin-bottom: 0;
+}
+.vectors {
+  margin-top: 95%;
+}
+.vector1 {
+  position: absolute;
+  bottom: 110px;
+  width: 260px;
+  height: 279px;
+  background-color: var(--normalCol);
+  clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 40%);
+  box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.66);
+  -webkit-box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.66);
+  -moz-box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.66);
+}
+.vector1:hover {
+  -webkit-transform: scale(1.04);
+  transform: scale(1.04);
+  -webkit-box-shadow: 15px 19px 27px -5px rgba (0, 0, 0, 0.75);
+  box-shadow: 15px 19px 27px -5px rgba (0, 0, 0, 0.75);
+}
+.vp {
+  font-family: ReenieBeanie;
+  position: relative;
+  top: -10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.vector1 select {
+  position: absolute;
+  right: 10%;
+  top: 40%;
+  background-color: transparent;
+  color: var(--defaultCol);
+  border: 1px solid var(--defaultCol);
+  width: 110px;
+  font-size: 16px;
+}
+.vector2 {
+  position: absolute;
+  width: 260px;
+  height: 276.5px;
+  background: var(--defaultCol);
+  clip-path: polygon(0 0, 100% 60%, 100% 100%, 0 100%);
+  bottom: -100%;
+  box-shadow: 1px 1px 5px 2px rgba(0, 0, 0, 0.52);
+  -webkit-box-shadow: 1px 1px 5px 2px rgba(0, 0, 0, 0.52);
+  -moz-box-shadow: 1px 1px 5px 2px rgba(0, 0, 0, 0.52);
+}
+.vector2 h1 {
+  position: absolute;
+  width: 100%;
+  left: 50%;
+  top: 65%;
+  transform: translate(-50%, -50%);
+  font-family: ReenieBeanie;
+}
+.vector2:hover {
+  -webkit-transform: scale(1.02);
+  transform: scale(1.02);
+  -webkit-box-shadow: 15px 19px 27px -5px rgba (0, 0, 0, 0.75);
+  box-shadow: 15px 19px 27px -5px rgba (0, 0, 0, 0.75);
+}
+.logo {
+  width: 104px;
+  height: 104px;
+  position: absolute;
+  left: 0%;
+  right: 74.88%;
+  top: 0%;
+  bottom: 0%;
+}
+
+.auctionIcon,
+.hamburgerMenu {
+  width: 30px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(-50%, 60%);
+}
+/* VISITOR HOME PAGE */
+#visitorHeader {
+  background: url(../fonts&data/Bricks.png);
+  background-color: var(--secondaryCol);
+  z-index: -1;
+  height: 20vh;
+  width: 100%;
+}
+#visitorH1 {
+  color: var(--primaryCol);
+}
+#findOne {
+  background-color: var(--defaultCol);
+  color: white;
+}
+#VisitorMain {
+  height: 40vh;
+  max-width: 100vh;
+  background-color: var(--normalCol);
+  position: relative;
+}
+.sliderImg {
+  width: 150px;
+  height: 100px;
+  padding: 0 10px 0 10px;
+  box-shadow: 3px 3px 4px 5px rgba(0, 0, 0, 0.29);
+  -webkit-box-shadow: 3px 3px 4px 5px rgba(0, 0, 0, 0.29);
+  -moz-box-shadow: 3px 3px 4px 5px rgba(0, 0, 0, 0.29);
+}
+
+@keyframes slide-left {
+  0% {
+    transform: translateX(-190%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes slide-right {
+  0% {
+    transform: translateX(-10%);
+  }
+  100% {
+    transform: translateX(-200%);
+  }
+}
+
+#VisitorMain #sliderTop {
+  position: relative;
+  transform: translateX(-100%);
+  display: flex;
+  animation: slide-left 20s linear infinite;
+}
+#VisitorMain #sliderTop > * {
+  margin-right: 20px;
+}
+
+#VisitorMain #sliderBottom {
+  position: relative;
+  display: flex;
+  animation: slide-right 20s linear infinite;
+}
+
+#VisitorMain #sliderBottom > * {
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+#visitorFooter {
+  height: 40vh;
+}
+
+.Lcara {
+  width: 65%;
+  margin: 0 auto;
+  background-color: var(--thirdlyCol);
+  position: relative;
+}
+.carousel-item {
+  font-size: 0.9rem;
+}
+
+.Lcara img {
+  height: 70px;
+  width: 70px;
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.caraBorder {
+  border-right: 1px solid var(--primaryCol);
+}
+/* VISITOR LISTING PAGE1 */
+#visitorListingPage {
+  background-color: var(--normalCol);
+}
+.card {
+  background-color: var(--backgroundCol);
+  color: var(--primaryCol);
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.card p button {
+  background-color: var(--primaryCol);
+  color: var(--backgroundCol);
+  font-family: roboto;
+  box-shadow: 2px 1px 5px 0px rgba(0, 0, 0, 0.61);
+  -webkit-box-shadow: 2px 1px 5px 0px rgba(0, 0, 0, 0.61);
+  -moz-box-shadow: 2px 1px 5px 0px rgba(0, 0, 0, 0.61);
+}
+.card:nth-child(even) {
+  background-color: var(--primaryCol);
+  color: var(--backgroundCol);
+}
+.card:last-child {
+  margin-bottom: 0;
+}
+
+.card:nth-child(even) p button {
+  background-color: var(--backgroundCol);
+  color: var(--primaryCol);
+  font-family: roboto;
+}
+.card img {
+  height: 200px;
+}
+.card .card-title {
+  font-family: ReenieBeanie;
+}
+.filtering {
+  width: 70px;
+  height: 70px;
+  background-color: #d44c2e;
+  color: var(--backgroundCol);
+  text-align: center;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* VISITOR FILTER PAGE */
+#Filters {
+  background-color: var(--defaultCol);
+  color: var(--normalCol);
+  border-color: var(--normalCol);
+  height: 90vh;
+}
+#Filters input {
+  color: var(--backgroundCol);
+  padding-left: 3px;
+}
+#visitorsFilters span {
+  color: var(--normalCol);
+  font-weight: bold;
+}
+::placeholder {
+  color: var(--normalCol);
+  padding: 5px;
+}
+select {
+  background-color: var(--defaultCol);
+  color: var(--normalCol);
+  padding: 5px;
+  border: 1px solid white;
+  border-radius: 3px;
+}
+
+/* ARTIST HOME PAGE */
+#artistHomePage header {
+  background-color: var(--normalCol);
+  height: 41vh;
+}
+#artistHomePage h1 {
+  color: var(--backgroundCol);
+}
+#artistHomePage header p {
+  color: var(--backgroundCol);
+}
+#artistHomePage header .col-5 {
+  background-color: var(--primaryCol);
+  margin-top: 20px;
+  padding: 3px;
+}
+#artistHomePage header .col-11 {
+  margin: 0 auto;
+  margin-top: 20px;
+  background-color: var(--contrastCol);
+}
+#artistMain p {
+  color: var(--primaryCol);
+  font-size: 1.1rem;
+  margin-bottom: 0;
+}
+#artistMain button {
+  background-color: var(--primaryCol);
+  color: var(--backgroundCol);
+}
+/* ARTIST ITEMS PAGE */
+#artistItemsPage {
+  background-color: var(--normalCol);
+  font-family: Roboto;
+}
+#artistItemsPage .container {
+  background-color: var(--backgroundCol);
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#artistItemsPage .container button {
+  border: 2px dashed var(--primaryCol);
+}
+#artistItemsPage .card {
+  background-color: var(--backgroundCol);
+  color: var(--primaryCol);
+  font-family: Roboto !important;
+}
+.priceBtn {
+  background-color: var(--primaryCol);
+  color: var(--backgroundCol);
+}
+
+#artistItemsPage .card img {
+  height: 150px;
+}
+#artistItemsPage p button {
+  background-color: var(--primaryCol);
+  color: var(--backgroundCol);
+}
+#artistItemsPage .card-title {
+  font-family: Roboto;
+  font-size: medium;
+  font-weight: bold;
+}
+.itemBtns {
+  background-color: var(--defaultCol);
+}
+.itemBtns button {
+  font-family: Roboto !important;
+  font-size: small;
+}
+.editBtn {
+  background-color: var(--backgroundCol);
+}
+#adingItemForm {
+  height: 100vh;
+  background-color: var(--defaultCol);
+  color: var(--normalCol);
+}
+#adingItemForm input,
+#adingItemForm textarea {
+  background-color: transparent;
+  color: var(--backgroundCol);
+  border: 2px solid var(--normalCol);
+  border-radius: 5px;
+}
+#takeASnapshot {
+  height: 170px;
+  background-color: transparent;
+  color: var(--normalCol);
+  border: 3px dashed var(--backgroundCol);
+  border-radius: 10px;
+  padding: 0;
+}
+#addNewItem {
+  background-color: var(--fourthlyCol);
+  color: var(--backgroundCol);
+}
+#cancel {
+  background-color: var(--backgroundGray);
+}
+#artistItemsPage input {
+  color: var(--backgroundCol);
+  padding-left: 3px;
+}
+video {
+  padding: 10px 0;
+  display: block;
+  width: 90%;
+  margin: 0 auto;
+  height: 70vh;
+  z-index: 0;
+}
+#artistCaptureImage {
+  background-color: var(--primaryCol);
+}
+.width-90 {
+  width: 90%;
+  margin: 0 auto;
+  z-index: 999;
+}
+#captureImage {
+  background-color: transparent;
+  display: flex;
+  margin: 0 auto;
+  z-index: 1;
+}
+#capturedImage {
+  max-width: 100%;
+  min-width: 100%;
+  max-height: 100%;
+  border-radius: 10px;
+}
+.noElement {
+  color: var(--defaultCol);
+  text-align: center;
+  padding-top: 200px;
+}
+.input-group-append span {
+  color: var(--backgroundCol);
+}
+.timer {
+  font-size: 60px;
+  color: #a26a5e;
+}
+#biddingInput {
+  width: 99%;
+  border-radius: 5px;
+  background-color: #a26a5e;
+  color: #edd5bb;
+}
+ul li {
+  list-style-type: none;
+}
+.w-40 {
+  width: 40%;
+  margin: 0 auto;
+  padding-left: 10px;
+  height: auto;
+}
+#biddingHistory {
+  width: 50%;
+}
+.left {
+  margin-right: 30px;
+
+}
+.right {
+padding-left: 80px;
+}
